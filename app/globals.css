@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFFAF0; /* Cream/Ivory - warmer than white */
+  --foreground: #2C2C2C; /* Dark Gray for text */
+  
+  /* Primary color - Navy Blue (from Groom's suit) */
+  --primary: #1A2855; /* Navy blue - solid */
+  --primary-dark: #0F1A3A; /* Darker navy */
+  --primary-light: #2C3E50; /* Lighter navy */
+  
+  /* Accent color - Luxe Gold (from Bride's saree) - PRIMARY ACCENT */
+  --accent: #C9A961; /* Solid gold - consistent across all elements */
+  --accent-dark: #A68443; /* Darker gold for hover states */
+  --accent-light: #E5C866; /* Lighter gold */
+  
+  /* Secondary accent color - Warm Taupe */
+  --secondary: #A89968; /* Warm taupe */
+  --secondary-dark: #8B7A4F; /* Darker taupe */
+  --secondary-light: #C4B896; /* Lighter taupe */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-accent-light: var(--accent-light);
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+  --color-secondary-light: var(--secondary-light);
+  
+  /* Typography */
+  --font-serif: var(--font-playfair);
+  --font-sans: var(--font-inter);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar (optional, subtle) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Animated Gradient Background */
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  /* Removed gradient - using solid cream background */
+  background: var(--background);
+}
+
+/* Animated Gradient Text */
+@keyframes gradient-text {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient-text {
+  /* Removed gradient - using solid navy color */
+  background: transparent;
+  color: var(--primary);
+  -webkit-text-fill-color: var(--primary);
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Smooth Transitions */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Parallax Container */
+.parallax-container {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.parallax-element {
+  will-change: transform;
+}
