@@ -74,11 +74,20 @@ export default function CountdownTimer() {
           <motion.div
             key={unit.value}
             initial={{ scale: 1.2, opacity: 0, y: 20 }}
-            animate={{ scale: 1, opacity: 1, y: 0 }}
+            animate={{
+              scale: 1,
+              opacity: 1,
+              y: [0, -3, 0],
+            }}
             transition={{
-              duration: 0.4,
-              type: "spring",
-              stiffness: 300,
+              scale: { duration: 0.4, type: "spring", stiffness: 300 },
+              opacity: { duration: 0.4 },
+              y: {
+                duration: 2,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: index * 0.2,
+              },
             }}
             whileHover={{
               scale: 1.15,
@@ -87,17 +96,6 @@ export default function CountdownTimer() {
               boxShadow: "0 20px 40px rgba(201, 169, 97, 0.4)",
             }}
             whileTap={{ scale: 0.95 }}
-            animate={{
-              y: [0, -3, 0],
-            }}
-            transition={{
-              y: {
-                duration: 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: index * 0.2,
-              },
-            }}
             className="bg-primary rounded-2xl px-4 py-3 sm:px-6 sm:py-4 shadow-lg cursor-pointer relative overflow-hidden group"
           >
             {/* Animated glow effect */}
