@@ -64,6 +64,6 @@ export default function Home() {
 
       {/* Playful Celebrate Button */}
       <CelebrateButton />
-    </main>
+      </main>
   );
 }

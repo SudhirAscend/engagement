@@ -63,7 +63,7 @@ export const eventConfig: EventConfig = {
   eventSubtext: "Invite you to an evening of celebration with clients, colleagues & well-wishers",
   
   // Date and time
-  date: "Saturday, 13 December 2025",
+  date: "Wednesday, 17 December 2025",
   time: "6:00 PM to 9:00 PM IST",
   
   // Venue details
@@ -99,8 +99,8 @@ export const eventConfig: EventConfig = {
   
   // Calendar event details
   calendarEvent: {
-    startDateTime: "2025-12-13T18:00:00+05:30", // ISO 8601 format with IST timezone
-    endDateTime: "2025-12-13T21:00:00+05:30", // ISO 8601 format with IST timezone
+    startDateTime: "2025-12-17T18:00:00+05:30", // ISO 8601 format with IST timezone
+    endDateTime: "2025-12-17T21:00:00+05:30", // ISO 8601 format with IST timezone
     description: "Reception Evening - Join us for an evening of celebration with Govardan & Sowmitha",
   },
 };
